@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Test{
+    public static void main(String args[]){
+       
+        
+        String data = "01/01/2023";
+        int str1 = data.indexOf("/");
+        int str2 = data.lastIndexOf("/");
+
+        String date = data.substring(0, str1);
+        System.out.print("Date: "+date +" :: ");
+        System.out.println(date.matches("[01-31]+"));
+        
+
+        String month = data.substring(str1+1, str2);
+        System.out.print("Month: "+month +" :: ");
+        System.out.println(month.matches("[01-12]+"));
+
+        String year = data.substring(str2+1);
+        System.out.print("Year: "+year +" :: ");
+        System.out.println(year.matches("[1923-2023]+"));
+
+    }
+}

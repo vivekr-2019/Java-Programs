@@ -1,0 +1,85 @@
+//display numbers invidually
+
+import java.util.*;
+
+class Test{
+    public static void main(String [] args){
+
+        int n =257;
+        int m=n;
+        while(n>0){
+        int rem = n%10;
+        n=n/10;
+        System.out.println(rem);
+        }
+        System.out.println(n);
+        System.out.println(m);
+    }
+}
+===========================================================================================================
+//count of number
+        int n = 153;
+        int count =0;
+
+        while(n>0){
+            n=n/10;
+            count++;
+        }
+        System.out.print(count);
+
+===========================================================================================================
+        int n = 153;
+        int m=n;
+        int sum=0;
+
+        while(n>0){
+        int r = n%10;
+        sum = sum + (r*r*r);
+        n=n/10;
+        }
+
+        System.out.println("Value of the number: "+sum);
+    
+        if (m == sum){
+            System.out.println("Armstrong");
+        }
+        else{
+            System.out.println("NOT");
+        }
+
+
+===========================================================================================================
+//reverse number
+
+    {
+        int n = 123456;
+        int rev=0;
+
+        while(n>0){
+        int r = n%10;
+        rev = (rev*10)+r;
+        n=n/10;
+    }
+    
+    System.out.println(rev);
+
+===========================================================================================================
+// check number is palindrome or not
+
+        int n = 12321;
+        int m=n;
+        int rev= 0;
+        
+
+        while(n>0){
+            int r = n%10;
+            rev= (rev*10)+r;
+            n=n/10;
+        }
+        System.out.println(rev);
+        if (rev==m){
+            System.out.println("PALINDROME");
+        }
+        else{
+            System.out.println("NOT");
+        }

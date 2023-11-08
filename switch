@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Test{
+
+    public static void main(String []args){
+        String web = "www.google.co.in";
+        int ind = web.lastIndexOf(".");
+        String web1 = web.substring(ind+1);
+
+        switch(web1){
+            case "com" : System.out.println("Commercial");
+            break;
+            case "in": System.out.println("india");
+            break;
+        }
+    }
+}

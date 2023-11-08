@@ -1,0 +1,30 @@
+/*import java.util.*;
+
+class Test{
+  public static void main(String[] args) {
+        
+
+        for(long i=0,j=1; i<=100; i++,j=j*2){
+            System.out.println(i+" "+j);
+        }
+  }
+}
+
+*/
+
+import java.math.BigInteger;
+import java.util.*;
+
+class Test {
+  public static void main(String[] args) {
+    
+    BigInteger i = BigInteger.ZERO; 
+    BigInteger j = BigInteger.ONE;
+    
+    while(i.compareTo(BigInteger.valueOf(15)) <= 0) {
+      System.out.println(i + " " + j);
+      i = i.add(BigInteger.ONE);
+      j = j.multiply(BigInteger.valueOf(2)); 
+    }
+  }
+}

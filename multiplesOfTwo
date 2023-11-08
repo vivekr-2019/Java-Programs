@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Test{
+    public static void main(String[] args) {
+
+    // using while loop
+        int  i =1;
+        while(i<100){
+            //System.err.println(i+i);
+            //i++;
+            System.out.println(i);
+            i=i*2;
+        }
+
+    //using do-while loop
+        int i = 1; 
+            int n =100;
+        do{
+            System.err.println(i);
+            i = i*2;
+        }while(i<n);
+        }
+ 
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Test{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String num = sc.nextLine();
+
+        System.out.println(num);
+        if(num.matches("[01]*")){
+            System.out.println("Binary");
+        }
+        else if(num.matches("[0-7]*")){
+            System.out.println("Octal");
+        }
+        else if(num.matches("[0-9A-b]*")){
+            System.out.println("Hexa");
+        }
+        else{
+            System.out.println("Decimal");
+        }
+        
+
+    }
+}

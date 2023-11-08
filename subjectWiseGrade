@@ -1,0 +1,125 @@
+import java.util.*;
+
+class Test{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int tamil = sc.nextInt();
+            if(tamil>90){
+                System.out.println("S");
+            }
+                else if(80<= tamil<= 90){
+                    System.out.println("A");
+                }
+                else if(tamil>=70 && tamil<=79){
+                        System.out.println("B");
+                    }
+                else if(tamil>=60 && tamil<=69){
+                    System.out.println("C");
+                }
+                else if(tamil>=56 && tamil<=59){
+                    System.out.println("D");
+                }
+                else if(tamil>=51 && tamil<=55){
+                    System.out.println("E");
+                }
+                else{
+                    System.out.println("F");
+                }
+
+                
+            
+        int eng = sc.nextInt();
+
+                if(eng>90){
+                System.out.println("S");
+            }
+                else if(eng>=80 && eng<=89){
+                    System.out.println("A");
+                }
+                else if(eng>=70 && eng<=79){
+                        System.out.println("B");
+                    }
+                else if(eng>=60 && eng<=69){
+                    System.out.println("C");
+                }
+                else if(eng>=56 && eng<=59){
+                    System.out.println("D");
+                }
+                else if(eng>=51 && eng<=55){
+                    System.out.println("E");
+                }
+                else{
+                    System.out.println("F");
+                }
+        int math = sc.nextInt();
+                if(math>90){
+                System.out.println("S");
+            }
+                else if(math>=80 && math<=89){
+                    System.out.println("A");
+                }
+                else if(math>=70 && math<=79){
+                        System.out.println("B");
+                    }
+                else if(math>=60 && math<=69){
+                    System.out.println("C");
+                }
+                else if(math>=56 && math<=59){
+                    System.out.println("D");
+                }
+                else if(math>=51 && math<=55){
+                    System.out.println("E");
+                }
+                else{
+                    System.out.println("F");
+                }
+        int sci = sc.nextInt();
+                if(sci>90){
+                System.out.println("S");
+            }
+                else if(sci>=80 && sci<=89){
+                    System.out.println("A");
+                }
+                else if(sci>=70 && sci<=79){
+                        System.out.println("B");
+                    }
+                else if(sci>=60 && sci<=69){
+                    System.out.println("C");
+                }
+                else if(sci>=56 && sci<=59){
+                    System.out.println("D");
+                }
+                else if(sci>=51 && sci<=55){
+                    System.out.println("E");
+                }
+                else{
+                    System.out.println("F");
+                }
+        int social = sc.nextInt();
+                if(social>90){
+                System.out.println("S");
+            }
+                else if(social>=80 && social<=89){
+                    System.out.println("A");
+                }
+                else if(social>=70 && social<=79){
+                        System.out.println("B");
+                    }
+                else if(social>=60 && social<=69){
+                    System.out.println("C");
+                }
+                else if(social>=56 && social<=59){
+                    System.out.println("D");
+                }
+                else if(social>=51 && social<=55){
+                    System.out.println("E");
+                }
+                else{
+                    System.out.println("F");
+                }
+
+        int total = tamil + eng + math + sci + social;
+        System.out.println(total + " Total Marks!!");
+
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Test{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+//vivek@gmail.com
+
+        String mail = sc.nextLine();
+
+        int at = mail.indexOf("@");
+        
+        String subUsername = mail.substring(0, at);
+        System.out.println("Username: "+ subUsername);
+
+        int atDot = mail.lastIndexOf(".");
+
+        String sub = mail.substring(at+1,atDot);
+        System.out.println("Company: "+sub);
+
+
+        String subAdd = mail.substring(atDot+1);
+        System.out.println("Domain: "+subAdd);
+
+        boolean companyinfo = sub.contains("gmail");
+        System.out.println(companyinfo);
+        
+    }
+}

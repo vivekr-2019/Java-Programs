@@ -1,0 +1,59 @@
+import java.util.*;
+
+class Test{
+    public static void main(String [] args){
+        System.out.println("Enter URL:");
+        Scanner sc=new Scanner(System.in);
+        String str = sc.nextLine();
+
+        System.out.println(" ");
+        System.out.println("Protocol");
+        int str1= str.indexOf(":");
+        String str11 = str.substring(0,str1);
+        System.out.println(str11);
+
+
+        if(str11.equals("http")){
+            System.out.println("Hyper Text Transfer Protocol");
+        }
+        else if(str11.equals("https")){
+            System.out.println("Hyper Text Transfer Protocol Secured");
+        }
+        else if(str11.equals("ftp")){
+            System.out.println("File Transfer Protocol");
+        }
+
+
+
+        System.out.println(" ");
+        System.out.println("Domain:");
+        int str2 = str.lastIndexOf(".");
+        String str22 = str.substring(str2+1);
+        System.out.println(str22);
+
+        if(str22.equals("com")){
+            System.out.println("Commercial");
+        }
+        else if(str22.equals("org")){
+            System.out.println("Organization");
+        }
+        else if(str22.equals("net")){
+            System.out.println("Network");
+        }
+        else if(str22.equals("in")){
+            System.out.println("India");
+        }
+
+
+
+
+
+
+
+
+
+
+        
+
+    }
+}
