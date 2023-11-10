@@ -1,0 +1,22 @@
+//Rotating element in an array
+
+import java.util.*;
+
+class Test{
+
+   public static void main(String[] args){
+
+      int a[] = {5,9,6,10,12,7,3,5,4,2};
+
+      int temp = a[0];
+
+      for(int i=1; i<a.length;i++){
+         a[i-1]=a[i];
+      }
+      a[a.length-1]=temp;
+
+      for(int i:a){
+         System.out.print(i+" ");
+      }
+   }
+}
