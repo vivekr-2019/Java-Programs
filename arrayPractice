@@ -1,0 +1,116 @@
+//sum of all elements
+import java.util.*;
+
+class Test{
+
+   public static void main(String[] args){
+
+      int A[] = {3,9,7,8,12,6,15,5,4,10};
+      int sum=0;
+      for(int i=0; i<A.length;i++){
+         sum = sum+A[i]; 
+      }
+      System.out.println(sum);
+
+      int max=A[0];
+      for(int i=1;i<A.length;i++){
+         if(A[i]>max) max=A[i];
+      }
+      System.err.println(max);
+   }
+}
+
+//sum of all elements
+import java.util.*;
+
+class Test{
+   public static void main(String[] args){
+
+      int A[] = {3,9,7,8,12,6,15,5,4,10};
+      int sum=0;
+         for(int x: A){
+
+            sum=sum+x;
+
+         }
+         System.out.println(sum);
+   }
+}
+
+
+
+
+//searching for an element in array
+import java.util.*;
+
+class Test{
+   public static void main(String[] args){
+
+      int A[] = {3,9,7,8,12,6,15,5,4,10};
+      Scanner sc= new Scanner(System.in);
+      System.out.print("Enter value of Key:");
+      int key=sc.nextInt();
+
+      for(int i=1;i<A.length;i++){
+
+         if(key==A[i]){
+            System.err.println("PRESENT");
+            System.err.println("Index of Key:"+(i));
+            System.exit(0);
+         }
+      }
+      System.out.println("NOT FOUND");
+   }
+}
+
+
+
+
+
+//find the max in the array
+import java.util.*;
+
+
+class Test{
+
+   public static void main(String[] args){
+      int a[] = {1,2,4,56,123,12345,1231,1232};
+      int max= a[0];
+
+      for(int i=1; i <a.length;i++){
+         if(a[i]>max) max =a[i];
+      }
+      System.out.println(max);
+      }
+   }
+
+
+
+
+
+
+
+
+//finding the second max in the array
+import java.util.*;
+
+
+class Test{
+
+   public static void main(String[] args){
+      int a[] = {3,9,7,8,12,6,15,5,4,10};
+      int max1= a[0];
+      int max2= a[0];
+      
+      for(int i=0;i<a.length;i++){
+         if(a[i]>max1){
+            max2=max1;
+            max1=a[i];
+         }
+         else if(a[i]>max2){
+            max2=a[i];
+         }
+      }
+      System.out.println(max2);
+   }
+}
