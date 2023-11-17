@@ -50,3 +50,31 @@ class Test{
 
    }
 }
+
+
+
+// delete an element in an array
+import java.util.*;
+
+class Test{
+   public static void main(String[] args) {
+      int a[] = new int[10];
+      a[0]=5; a[1]=9; a[2]=6; a[3]=10; a[4]=12; a[5]=7;
+
+      int index = 4;
+
+      for(int x: a)
+         System.out.format("%3d",x);
+
+      for(int i=index; i<a.length-1; i++){
+         a[i-1]=a[i];
+      }
+      
+      System.out.println("");
+
+      for(int x: a)
+         System.out.format("%3d",x);
+         
+               System.out.println("");
+   }
+}
