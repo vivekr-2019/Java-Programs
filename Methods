@@ -1,0 +1,42 @@
+import java.util.*;
+class Test{
+    int max(int x, int y){
+        if(x>y){
+            return x;
+        }
+        else{
+            return y;
+    }
+    }
+    public static void main(String [] args){
+        int a=10, b=15;
+        int c;
+        c = max(a,b);
+        System.out.println(c);
+}
+}
+
+
+
+
+// calling method by creating an object of a class
+import java.util.*;
+class Test{
+      int max(int x, int y){
+            if(x>y){
+                  return x;
+            }
+            else{
+                  return y;
+            }
+      }
+      public static void main(String [] args){      
+            int a=10, b=15;
+            int c;
+
+            Test vivek = new Test();
+            
+            c= vivek.max(a,b);
+            System.out.println(c);
+      }
+}
