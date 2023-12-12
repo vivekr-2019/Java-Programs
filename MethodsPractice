@@ -107,6 +107,9 @@ class Test{
 
 
 
+
+
+//find GCD of two numbers
 import java.util.*;
 
 class Test{
@@ -143,28 +146,32 @@ class Test{
 
 
 
-
-//Find max in array using methods
+// find max element in array java
 import java.util.*;
 
 class Test{
 
-    static int max(int X[]){
-        
-        int max=X[0];
-        for(int i =0; i<X.length;i++){
-            if(X[i]>max){
-                max=X[i];
+    static int max(int x[]){
+        int m = x[0];
+        for(int i=0; i<x.length; i++){
+            if(x[i]>m){
+                m= x[i];
             }
-        }
-        return max;
-    }
+        }return m;
 
-
-    public static void main(String[] args) {
-        
-        int A[] = {8,3,15,9,7};
-        System.out.println(max(A));
     }
+    
+    public static void main(String [] args){
+
+       int A[] = {255,3,15,123,1117};
+
+       for(int x:A){
+            System.out.print(x+" ");
+       }
+       System.out.println();
+       System.out.println(max(A));
 }
+}
+
+
 
