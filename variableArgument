@@ -27,3 +27,34 @@ class Test{
         showList(5,"vivek", "gokul", "ravi", "ram");
     }
 }
+
+
+
+
+
+//Maximum of numbers using varagrs
+
+import java.util.*;
+class Test{
+
+    int max(int...S){
+        int max =S[0];
+        for(int i=0; i<S.length; i++){
+            if(S[i]<max){
+               max= S[i];
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        Test vivek =new Test();
+        System.out.print(vivek.max(40,10,20,30,4,1));
+    }
+}
+
+
+//Sum of all elements using varargs
+
+
+//Calculate Discount using varargs
