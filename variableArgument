@@ -1,0 +1,24 @@
+
+//Variable Argument
+import java.util.*;
+
+class Test{
+    static void showList(String ...S){
+        for(int i=0; i<S.length; i++){
+            System.out.println(i+1+". "+ S[i]);
+        }
+    }
+
+    static void showList(int x, String ...S){
+        for(int i=0; i<S.length; i++){
+            System.out.println(x+". "+ S[i]);
+            x++;
+        }
+    }
+
+    public static void main(String[] args) {
+        showList("vivek", "gokul", "ravi", "ram");
+        System.out.println();
+        showList(5,"vivek", "gokul", "ravi", "ram");
+    }
+}
