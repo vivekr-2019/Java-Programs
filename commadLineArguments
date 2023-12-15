@@ -1,0 +1,20 @@
+//CommandLine Arguments
+import java.util.*;
+
+class Test{
+
+    
+    public static void main(String[] args) {
+
+        double s=0;
+        for(String x:args){
+            if(x.matches("[0-9\\.]+"))  
+            System.out.print(x+" ");
+                    s= s+Double.parseDouble(x);
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println(s);
+
+    }
+}
