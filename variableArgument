@@ -29,6 +29,36 @@ class Test{
 }
 
 
+// import java.util.*;
+
+class Test{
+
+
+    int max(int...x){
+        if (x.length==0) return Integer.MIN_VALUE;
+        int m =x[0];
+        for(int i=0; i<x.length;i++){
+            if(m<x[i]){
+                m=x[i];
+            }
+        }return m;
+    }
+
+    public static void main(String[] args) {
+        Test vivek = new Test();
+
+        System.out.println(vivek.max(12));
+        System.out.println(vivek.max(12,23));
+        System.out.println(vivek.max(12,23,34));
+        System.out.println(vivek.max(12,23,34,56));
+        System.out.println(vivek.max(12,23,34,56,99));
+    }
+}
+
+
+
+
+
 
 
 
@@ -55,6 +85,78 @@ class Test{
 
 
 //Sum of all elements using varargs
+import java.util.*;
+
+class Test{
+
+
+    int sum(int...x){
+        int s=0;
+
+        for(int i=0; i<x.length;i++){
+            s=s+x[i];
+        }
+        return s;
+
+    }
+
+    public static void main(String[] args) {
+        Test vivek = new Test();
+
+        System.out.println(vivek.sum());
+        System.out.println(vivek.sum(12));
+        System.out.println(vivek.sum(12,23));
+        System.out.println(vivek.sum(12,23,34));
+        System.out.println(vivek.sum(12,23,34,56));
+        System.out.println(vivek.sum(12,23,34,56,99));
+    }
+}
+
 
 
 //Calculate Discount using varargs
+import java.util.*;
+
+class Test{
+
+    double discount(double... x){
+        double sum=0;
+        for(int i=0; i<x.length; i++){
+            sum = sum + x[i];
+        }
+
+        double price =0;
+        double discount= 0;
+        
+        if(sum<500){
+            discount = 10;
+            price = (sum/100)*discount;
+            price = sum -price;
+        }
+        
+        if(sum>500 && sum<1000){
+            discount = 15;
+            price = (sum/100)*discount;
+            price = sum -price;
+        }
+
+        if(sum>1000){
+            discount = 20;
+            price = (sum/100)*discount;
+            price = sum -price;
+        }
+
+        if (sum>2000){
+            discount = 25;
+            price = (sum/100)*discount;
+            price  = sum-price;
+        }
+        return price;
+    }
+    public static void main(String[] args) {
+        Test vi = new Test();
+        
+        System.out.println(vi.discount(150,100,1000,1000));
+
+    }
+}
