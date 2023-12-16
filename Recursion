@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Test{
+
+    //Recursion
+    
+    void fun1(int n){
+        if(n>0){
+            System.out.format("%3d", n);
+            fun1(n-1);
+        }
+    } 
+
+    void fun2(double n){
+        if(n>0){
+            fun2(n-1);
+            System.out.print(n + " ");
+        }
+    }
+    
+    public static void main(String[] args) {
+        Test vi = new Test();
+        vi.fun1(3);
+        System.out.println();
+        vi.fun2(3);
+        
+    }
+}
