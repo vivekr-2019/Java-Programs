@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Circle{
+    
+
+    public double area(double radius){
+        return Math.PI * radius * radius;    }
+    public double peri(double radius){
+        return 2 * Math.PI * radius;    }
+    public double circumference(double radius){
+        return 2 * Math.PI * radius;    }
+}
+
+class Test{
+    public static void main(String [] args){
+
+        Circle vivek1 = new Circle();
+        0
+       // vivek1.radius = 7;
+
+        System.out.println(vivek1.area(7));
+        System.out.println(vivek1.peri(7));
+        System.out.println(vivek1.circumference(7));
+
+    
+    }
+}
+
