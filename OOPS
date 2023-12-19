@@ -172,7 +172,8 @@ class Test{
 }
 
 
-//Writing a class for Student
+//Writing class for Student
+
 import java.util.*;
 
 class Student{
@@ -209,7 +210,11 @@ class Student{
         }
 
     public String details(){
-        return "Rollno : "+rollno+ "\n"+"Name : "+Name+"\n"+"Course : "+Course+"\n";
+        return "Rollno : "+rollno+ "\n"+"Name : "+Name+"\n"+"Course : "+Course;
+    }
+
+    public String toString(){
+        return "Rollno : "+rollno+ "\n"+"Name : "+Name+"\n"+"Course : "+Course;
     }
     }
 
@@ -218,6 +223,7 @@ class Test{
     public static void main(String args[]){
 
         Student vivek = new Student();
+        Student vivek2 = new Student();
 
         vivek.m1 = 70;
         vivek.m2 = 80;
@@ -232,18 +238,11 @@ class Test{
         System.out.println(vivek.average());
         System.out.println(vivek.grade());
 
+        System.out.println();
+        vivek2.Name = "Vivek";
+        vivek2.rollno = 184;
+        vivek2.Course = "M.Tech Integrated Software Engineering";
+        System.out.println(vivek2);
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
