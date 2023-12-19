@@ -1,5 +1,6 @@
-import java.util.*;
+//Writing a class for Circle
 
+import java.util.*;
 class Circle{
     
 
@@ -28,9 +29,11 @@ class Test{
 
 
 
+
+
+// Writing a class for circle
+
 import java.util.*;
-
-
 class Circle{
 
     public double radius;
@@ -72,15 +75,7 @@ class Test{
 
 
 
-
-
-
-
-
-
-
-
-
+// Writing a class for rectangle
 import java.util.*;
 
 
@@ -122,3 +117,71 @@ class Test{
         System.out.println("Is it square, "+vivek.issquare());
     }
 }
+
+
+
+
+
+
+//Writing a class for cylinder
+import java.util.*;
+
+class Cylinder{
+    public double radius;
+    public double height;
+    
+    public double lidArea(){
+
+        return Math.round(Math.PI * radius * radius * 100.0) / 100.0;
+
+    }
+
+    public double circumference(){
+
+        return Math.round(2 * Math.PI * radius * 100.0) / 100.0;
+        
+    }
+
+    public double totalSurfaceArea(){
+        return 2 * lidArea() + circumference() * height;
+    }
+
+    public double volume(){
+        return lidArea()*height;
+    }
+
+
+
+}
+
+class Test{
+    public static void main(String[] args) {
+        
+        Cylinder vivek = new Cylinder();
+
+        vivek.radius = 7;
+        vivek.height = 10;
+
+        System.out.println("Area "+vivek.lidArea());
+        System.out.println("Circumference "+vivek.circumference());
+        System.out.println("Volume "+vivek.volume());
+        System.out.println("TotalArea "+vivek.totalSurfaceArea());
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
