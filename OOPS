@@ -15,7 +15,7 @@ class Test{
     public static void main(String [] args){
 
         Circle vivek1 = new Circle();
-        0
+        
        // vivek1.radius = 7;
 
         System.out.println(vivek1.area(7));
@@ -26,3 +26,99 @@ class Test{
     }
 }
 
+
+
+import java.util.*;
+
+
+class Circle{
+
+    public double radius;
+
+    public double area(){
+        return Math.PI * radius * radius;
+    }
+
+    public double peri(){
+        return 2 * Math.PI * radius;
+    }
+
+    public double circumference(){
+        return peri();
+    }
+}
+
+class Test{
+    public static void main(String [] args){
+
+        Circle vivek = new Circle();
+
+        for (int i=1; i<=10; i++){
+
+            vivek.radius = i;
+
+            System.out.println("Circle radius "+i);
+            System.out.println(vivek.area());
+            System.out.println(vivek.peri());
+            System.out.println(vivek.circumference());
+
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+
+class Rectangle{
+    double length;
+    double breadth;
+
+    public double area(){
+        return length * breadth;
+    }
+
+    public double perimeter(){
+        return 2 * (length + breadth);
+    }
+
+    public boolean issquare(){
+        if(length==breadth){
+            System.out.println("Its a square");
+            return true;
+        }
+        else{
+            System.out.println("Its rectangle");
+            return false;
+        }
+    }
+    
+}
+
+class Test{
+
+    public static void main(String[] args) {
+        Rectangle vivek = new Rectangle();
+
+        vivek.length=10.5;
+        vivek.breadth=5.5;
+
+        System.out.println("Area "+vivek.area());
+        System.out.println("Perimeter "+vivek.perimeter());
+        System.out.println("Is it square, "+vivek.issquare());
+    }
+}
