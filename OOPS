@@ -172,6 +172,68 @@ class Test{
 }
 
 
+//Writing a class for Student
+import java.util.*;
+
+class Student{
+    public int rollno;
+    public String Name;
+    public String Course;
+    public double m1, m2, m3;
+
+    public double total(){
+        return m1+m2+m3;
+    }
+    public double average(){
+        return total()/3;
+    }
+    public String grade(){
+        if(average()>=70){
+            return "Grade A";   
+        }
+        if(average()<69 && average()>60){
+            return "Grade B";
+        }
+
+        if(average()<59 && average()>50){
+            return "Grade C";
+        }
+
+        if(average()<49 && average()>40){
+            return "Grade D";
+        }
+        else{
+            return "Grade F";
+        }
+
+        }
+
+    public String details(){
+        return "Rollno : "+rollno+ "\n"+"Name : "+Name+"\n"+"Course : "+Course+"\n";
+    }
+    }
+
+
+class Test{
+    public static void main(String args[]){
+
+        Student vivek = new Student();
+
+        vivek.m1 = 70;
+        vivek.m2 = 80;
+        vivek.m3 = 65;
+
+        vivek.Name = "Vivek";
+        vivek.rollno = 184;
+        vivek.Course = "M.Tech Integrated Software Engineering";
+
+        System.out.println(vivek.details());
+        System.out.println(vivek.total());
+        System.out.println(vivek.average());
+        System.out.println(vivek.grade());
+
+    }
+}
 
 
 
