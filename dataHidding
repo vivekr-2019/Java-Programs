@@ -1,0 +1,37 @@
+import java.util.*;
+
+
+class Rectangle{
+    private double length;  // making it private
+    double breadth;         // keeping it public
+
+     double getlength(){    // using getter method for accessing the length for reading it
+        return length;
+     }
+     void setlength(double l){  //using setter method for accessing the length for writing it
+        length =l;
+     }
+
+
+     double area(){
+        return length* breadth;
+    }
+     double perimeter(){
+        return 2*(length * breadth);
+    }
+}
+
+class Test{
+    public static void main(String [] args){
+
+        Rectangle vi = new Rectangle();
+        vi.setlength(10.5);
+        vi.breadth =5.5;
+
+        System.out.println(vi.getlength());
+        System.out.println(vi.breadth);
+
+        System.out.println("Area "+vi.area());
+        System.out.println("Perimeter "+vi.perimeter());
+    }
+}
