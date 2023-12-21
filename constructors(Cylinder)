@@ -1,0 +1,73 @@
+class Cylinder{
+    //properties
+    private int radius;
+    private int height;
+
+    //constructors
+    public Cylinder(){
+        radius =0;
+        height =0;
+    }
+    
+    public Cylinder(int r){
+        radius = r;
+        height = 1;
+    }
+
+    public Cylinder(int r, int h){
+        setHeight(h);;
+        setRadius(r);;
+    }
+
+
+    //property methods
+    int getRadius(){
+        return radius;
+    }
+    int getHeight(){
+        return height;
+    }
+
+    void setRadius(int r){
+        if(r>=0){
+            radius=r;
+        }
+        else{
+            radius=0;
+        }
+    }
+    void setHeight(int h){
+        if(h>=0){
+            height =h;
+        }
+        else{
+            height=0;
+        }
+    }
+
+    double volume(){
+        return Math.PI * radius * radius * height;
+    }
+
+    double area(){
+        return Math.round(Math.PI * radius * radius)  ;
+    }
+    
+}
+
+class Test{
+    public static void main(String[] args) {
+        
+        Cylinder cy = new Cylinder(-7,10);
+
+
+        System.out.println(cy.getRadius());
+        System.out.println(cy.getHeight());
+
+        System.out.println(cy.volume());
+        System.out.println(cy.area());
+        
+        
+
+    }
+}
