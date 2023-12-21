@@ -1,0 +1,77 @@
+import java.util.*;
+
+class Rectangle{
+
+    private int length;
+    private int breadth;
+
+
+  //constructor
+    public Rectangle(){
+        length=10;
+        breadth=10;
+    }
+
+  //constructor
+    public Rectangle(int l, int b){
+        setLength(l);
+        setBreadth(b);
+    }
+
+  //constructor
+    public Rectangle(int side){
+        length = breadth = side;
+    }
+
+    int area(){
+        return length * breadth;
+    }
+    int perimeter(){
+        return 2 * (length+breadth);
+    }
+    boolean isSquare(){
+        return length == breadth;
+    }
+
+
+    int getLength(){
+        return length;
+    }
+    int getBreadth(){
+        return breadth;
+    }
+
+    void setLength(int l){
+        if(l>0){
+            length=l;
+        }
+        else{
+            length=1;
+        }
+    }
+
+    void setBreadth(int b){
+        if(b>0){
+            breadth=b;
+        }
+        else{
+            breadth=0;
+        }
+    }
+
+}
+
+
+public class Main{
+    public static void main(String[] args) {
+
+
+        Rectangle r = new Rectangle();
+        System.out.println("Area: "+r.area());
+        System.out.println("Perimeter: "+r.perimeter());
+        System.out.println("Is it square: "+r.isSquare());
+
+        System.out.println("Length: "+r.getLength());
+        System.out.println("Breadth: "+r.getBreadth());
+    }
+}
