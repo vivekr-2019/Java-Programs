@@ -23,12 +23,15 @@ class Rectangle{
         length = breadth = side;
     }
 
+//method for finding area(related to class directly(because of rectangle(has area,perimeter)), also called as instance method 
     int area(){
         return length * breadth;
     }
     int perimeter(){
         return 2 * (length+breadth);
     }
+
+//enquiry method
     boolean isSquare(){
         return length == breadth;
     }
