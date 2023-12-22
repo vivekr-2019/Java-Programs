@@ -1,0 +1,121 @@
+import java.util.*;
+
+class Product{
+    private String itemno;
+    private String name;
+    private double price;
+    private int qty;
+
+
+    //Property method
+    String getItemno(){
+        return itemno;
+    }
+
+    String getName(){
+        return name;
+    }
+
+    double getPrice(){
+        return price;
+    }
+    void setPrice(double p){
+        price = p;
+    }
+
+    int getQty(){    
+        return qty;
+    }
+    void setQty(int q){
+        qty = q;
+    }
+    
+
+    //constructors
+    Product (String i){
+        itemno = i;
+    }
+
+    Product (String i, String n){
+        itemno =i;
+        name = n;
+    }
+    Product (String i, String n, double p, int q){
+        itemno =i;
+        name =n;
+        setPrice(p);
+        setQty(q);
+    }
+
+
+    String details(){
+        return getItemno()+getName()+getPrice()+getQty();
+    }
+
+}
+
+
+class Customer{
+
+    //Datamember or properties
+    private int custID;
+    private String Nam;
+    private String Address;
+    private int Phone; 
+
+    //Property methods
+    int getCustID(){
+        return custID;
+    }
+    String getNam(){
+        return Nam;
+    }
+    String getAddress(){
+        return Address;
+    }
+    void setAddress(String a){
+        Address =a;
+    }
+
+    int getPhone(){return Phone;}
+    void setPhone(int ph){
+        Phone=ph;
+    }
+
+
+    Customer(String n, int i){
+        Nam =n;
+        custID=i;
+    }
+    
+
+    String details(){
+        return getNam()+getCustID()+getAddress()+getPhone();
+    }
+
+}
+
+
+
+
+
+class Test{
+    public static void main(String[] args) {
+        
+        Product p = new Product("MIS001","Vivek",20,100);
+        
+
+        System.out.println(p.details());
+
+
+        System.out.println();
+
+
+        
+        
+        Customer c = new Customer("Vivek", 12123);
+        System.out.println(c.details());
+        System.out.println(c.getCustID());
+
+    }
+}
