@@ -1,0 +1,65 @@
+class Subject{
+    private String subID;
+    private String name;
+    private int maxMarks;
+    private int marksObtained;
+
+    //property methods
+
+    String getSubID(){
+        return subID;
+    }
+    String getName(){
+        return name;
+    }
+    int getmaxMarks(){
+        return maxMarks;
+    }
+    int getmarksObtained(){
+        return marksObtained;
+    }
+    void setmarksObtained(int m){
+        if(m<0){
+            marksObtained=0;
+        }
+        else{
+            marksObtained=m;
+        }
+    }
+
+    //Constructors
+    Subject(String id, String n, int tm, int m){
+        subID= id;
+        name = n;
+        maxMarks = tm;
+        setmarksObtained(m);
+    }
+
+    String subdetails(){
+        return getName() +" "+ getSubID()+" "+getmaxMarks()+" "+getmarksObtained();
+    }
+}
+
+
+
+
+class Test{
+    public static void main(String[] args) {
+        Subject s = new Subject("MAT01", "STAT", 100, -80);
+
+        String details = s.subdetails();
+
+        System.out.println(details);
+
+        Subject subs[] = new Subject[2];
+        subs[0] = new Subject("DSA", "s101", 100, 80);
+        subs[1] = new Subject("OS", "s102",100, 90);
+
+        for(int i=0; i<2;i++){
+            String det = subs[i].subdetails();
+            System.out.println(det);
+        }
+    }
+}
+
+
