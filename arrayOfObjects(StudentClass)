@@ -1,0 +1,58 @@
+import java.util.*;
+
+class Student {
+    private String rollno;
+    private String SName;
+    private String Dept;
+    private String subjects[] = new String[3];
+
+    // property methods
+    String getRollno() {
+        return rollno;
+    }
+
+    String getSName() {
+        return SName;
+    }
+
+    String getDept() {
+        return Dept;
+    }
+
+    void setDept(String d) {
+        Dept = d; // Corrected method to set the department
+    }
+
+    String[] getSubjects() {
+        return subjects;
+    }
+
+    void setSubjects(String... s) {
+        subjects = s;
+    }
+
+    // constructors
+    public Student(String rollno, String SName, String Dept, String... subjects) {
+        this.rollno = rollno;
+        this.SName = SName;
+        this.Dept = Dept;
+        this.subjects = subjects;
+    }
+
+    public String toString() {
+        return "Roll No: " + rollno + ", Name: " + SName + ", Department: " + Dept + ", Subjects: " + Arrays.toString(subjects);
+    }
+}
+
+class Test {
+    public static void main(String args[]) {
+        Student subjects[] = new Student[3];
+        subjects[0] = new Student("MIS01", "Vivek", "SE", "DSA","OS");
+        subjects[1] = new Student("MIS02", "gokul", "SE", "DBMS");
+        subjects[2] = new Student("MIS03", "mayank", "SE", "Networking");
+
+        for (Student s : subjects) {
+            System.out.println(s);
+        }
+    }
+}
