@@ -1,0 +1,58 @@
+class Circle{
+
+    public int radius;
+
+    Circle(){
+        radius =7;
+    }
+
+     double area(){
+        return Math.PI * radius * radius;
+    }
+
+    double perimeter(){
+        return 2 * Math.PI * radius;
+    }
+
+    double circumference(){
+        return perimeter();
+    }
+
+}
+
+class Cylinder extends Circle{
+     int height;
+
+    Cylinder(){
+        height = 10;
+    }
+
+    double volume(){
+        return area() * height;
+    }
+}
+
+class Test{
+    public static void main(String[] args) {
+        
+        Circle c = new Circle();
+        
+        double numc1 = c.area();
+        System.out.println(numc1);
+
+        c.radius = 8;
+        double numc2 = c.area();
+        System.out.println(numc2);
+        
+
+
+
+        Cylinder cc = new Cylinder();
+
+        cc.radius =9;
+        double numcc1 = cc.area();
+        System.out.println(numcc1);
+
+        System.out.println(cc.volume());
+    }
+}
