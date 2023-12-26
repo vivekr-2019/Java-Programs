@@ -1,0 +1,126 @@
+import java.util.*;
+
+class Account{
+    private int accno;
+    private String name;
+    private String address;
+    private long phoneNumbers;
+    private String dob;
+    private double balance;
+
+    //properties methods
+    public int getAccno(){
+        return accno;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getAddress(   ){
+        return address;
+    }
+    public long getPhoneNumbers(){
+        return phoneNumbers;
+    }
+    public String getDOB(){
+        return dob;
+    }
+    public double getBalance(){
+        return balance = 100;
+    }
+
+    public void setAddress(String add){
+        this.address = add;
+    }
+    public void setPhoneNumbers(long p) {
+        this.phoneNumbers = p;
+    }
+
+    //constructors
+    
+    public Account(int accno, String name, String add, String dob, long p){
+        this.accno = accno;
+        this.name = name;
+        this.address = add;
+        this.phoneNumbers = p;
+        this.dob = dob;
+    }
+    public Account(int accno, String name){
+        this.accno = accno;
+        this.name = name;
+    }
+    public String toString(){
+        return getAccno() + "\n" +
+           getName() + "\n" +
+           getAddress() + "\n" +
+           getPhoneNumbers() + "\n" +
+           getDOB() + "\n" +
+           getBalance();    
+        }    
+    }
+
+class SavingsAccount extends Account{
+
+    Scanner sc = new Scanner(System.in);
+    double amount = sc.nextDouble();
+    
+    SavingsAccount(int accno, String name, String add, String dob, long p){
+       super(accno, name, add, dob, p);
+    }
+
+    double deposit(){
+            return getBalance() + amount;
+    }
+    double withdrawal(){
+        return getBalance() - amount;
+    }
+    double fixeddeposit(){
+        return amount;
+    }
+    double close(){
+        return getBalance();
+    }
+
+}
+
+class LoanAccount extends SavingsAccount{
+    LoanAccount(int accno, String name, String add, String dob, long p){
+        super(accno, name, add, dob, p);
+    }
+
+    double payemi(){
+        return amount;
+    }
+    double topuploan(){
+        return amount;
+    }
+    double repayment(){
+        return amount;
+    }
+
+}
+
+class Test{
+    public static void main(String[] args) {
+        Account a = new Account(184,"VIVEK", "TPT", "5-OCT-2001", 7898972899L);
+        System.out.println(a.toString());
+
+        
+        SavingsAccount sa = new SavingsAccount(184,"VIVEK", "TPT", "5-OCT-2001", 7898972899L);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number"+"\n"+"1.Deposit"+ "\n"+"2.Withdrawal"+"\n"+"3.Fixed Deposit"+"\n"+"4.Close");
+        int num = sc.nextInt();
+        if(num==1){
+            System.out.println(sa.deposit());
+        }
+        if(num==2){
+            System.out.println(sa.withdrawal());
+        }
+        if(num==3){
+            System.out.println(sa.fixeddeposit());
+        }
+        if(num==4){
+            System.err.println(sa.close());
+        }
+    }
+}
+
