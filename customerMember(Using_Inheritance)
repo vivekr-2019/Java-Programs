@@ -1,0 +1,61 @@
+import java.util.*;
+
+
+class Customer{
+
+    private String name;
+    private long phno;
+
+    public Customer(String n, long p){
+        this.name = n;
+        this.phno = p;
+    } 
+    String payBill(){
+        return "Total Bill Amount";
+    }
+    String getName(){
+        return name;
+    }
+    void setname(String name){
+        this.name = "ravi";
+    }
+    long getPhno() {
+        return phno;
+    }
+}
+
+class Member extends Customer{
+
+
+    private String custId;
+    private String address;
+    private String dob;
+
+    Member(String n, long p){
+        super(n, p);
+        this.custId="123";
+        this.address="address";
+        this.dob="5-oct-2001";
+    }
+
+
+    String callBack(){
+        return getName()+" "+getPhno()+" "+custId+" "+"New Arrivals"+"\n"+"Offers"+"\n"+"BirthDay Wishes";
+    }
+
+}
+
+class Test{
+    public static void main(String[] args) {
+        Customer c= new Customer("vivek",7898797899L);
+        
+        
+        System.out.println(c.payBill());
+        System.out.println();
+        
+        
+        Member m = new Member("vivek",7898797899L);
+
+        System.out.println(m.callBack());
+    }
+}
