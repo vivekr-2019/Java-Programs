@@ -1,0 +1,50 @@
+import java.util.*;
+
+class CellPhone{
+    private long phno;
+    private long imei;
+
+    String call(){
+        return "Calling";
+    }
+    String sms(){
+        return "Message";
+    }
+    String saveContact(){
+        return "ContactSaved";
+    }
+    String deleteContact(){
+        return "deleteContact";
+    }
+}
+
+class SmartPhone extends CellPhone{
+
+    private long macAddress;
+    private long phno2;
+
+
+    String playmusic(){
+        return "Music is playing";
+    }
+    String clickPhoto(){
+        return "PhotoCaptured";
+    }
+}
+
+class Test{
+    public static void main(String[] args) {
+
+        CellPhone cp = new CellPhone();
+        System.out.println(cp.call());
+        System.out.println(cp.sms());
+        System.out.println(cp.saveContact());
+        System.out.println(cp.deleteContact());
+
+        System.out.println();
+
+        SmartPhone sp = new SmartPhone();
+        System.out.println(sp.playmusic());
+        System.out.println(sp.clickPhoto());
+    }
+}
